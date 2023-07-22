@@ -1,0 +1,117 @@
+//data from employee
+
+#include<iostream>
+using namespace std;
+class emp
+{
+  int num,basic;
+  long da,it,netsal,gsal;
+  char name[20];
+  public:
+  void read();
+  void disp();//data from employee
+
+#include<iostream>
+using namespace std;
+class emp
+{
+  int num,basic;
+  long da,it,netsal,gsal;
+  char name[20];
+  public:
+  void read();
+  void disp();
+  void calc();
+  
+};
+
+void emp::read()
+{
+  cout<<"enter the emp id name and basic salary \n";
+  cin>>num>>name>>basic;
+}
+
+void emp::calc()
+{
+ da=(0.52)*basic;
+ gsal=da+basic;
+ it=(0.3)*gsal;
+ netsal=basic+da-it;
+}
+
+
+void emp::disp()
+{
+  cout<<num<<"\t\t"<<name<<"\t\t\t"<<basic<<"\t\t"<<da<<"\t\t"<<it<<"\t\t"<<gsal<<"\t\t\t"<<netsal<<"\n";
+  
+}
+int main ()
+{
+  int n;
+  cout<<"enter the no of tghe emp";
+  cin>>n;
+  emp e[n],*p;
+  for(int i=0;i<n;i++)
+  {
+    p=&e[i];
+    p->read();
+    p->calc();
+  }
+    cout<<"sl no.eid\t name \t\t basic salary\t\tda\t\t gross salary\t income tax\t\tnetsalary\n";
+    for(int i=0;i<n;i++)
+    {
+      p=&e[i];
+      p->disp();
+      
+    }
+    return 0;
+  
+}
+
+
+  void calc();
+  
+};
+
+void emp::read()
+{
+  cout<<"enter the emp id name and basic salary \n";
+  cin>>num>>name>>basic;
+}
+
+void emp::calc()
+{
+ da=(0.52)*basic;
+ gsal=da+basic;
+ it=(0.3)*gsal;
+ netsal=basic+da-it;
+}
+
+
+void emp::disp()
+{
+  cout<<num<<"\t\t"<<name<<"\t\t\t"<<basic<<"\t\t"<<da<<"\t\t"<<it<<"\t\t"<<gsal<<"\t\t\t"<<netsal<<"\n";
+  
+}
+int main ()
+{
+  int n;
+  cout<<"enter the no of tghe emp";
+  cin>>n;
+  emp e[n],*p;
+  for(int i=0;i<n;i++)
+  {
+    p=&e[i];
+    p->read();
+    p->calc();
+  }
+    cout<<"sl no.eid\t name \t\t basic salary\t\tda\t\t gross salary\t income tax\t\tnetsalary\n";
+    for(int i=0;i<n;i++)
+    {
+      p=&e[i];
+      p->disp();
+      
+    }
+    return 0;
+  
+}
